@@ -1,0 +1,14 @@
+.App {
+  text-align: center;
+  border:2px solid grey;
+  box-shadow: 2px;
+  background:coral;
+}
+
+.App-title {
+  //font-size: 1.5em;
+}
+
+.App-intro {
+  font-size: large;
+}

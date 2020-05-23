@@ -7,9 +7,14 @@ class App extends Component {
   state = {
     userInput:''
   }
-  changedInputHandler = (event) =>{
+  changedInputHandler = (event) => {
     const userInput = event.target.value;
     this.setState({userInput:userInput});
+  }
+  deleteCharHandler = (inputText) => {
+      const charInput = this.state.userInput.split('');
+      charInput.splice(inputText,1);
+      this.setState({userInput:charInput.join('')})
   }
   render() {
     return (
@@ -23,6 +28,7 @@ class App extends Component {
         <Validation textLength={this.state.userInput.length}/>
         {this.state.userInput.split('').map((inputText,index)=>{
             return <Char
+                       click ={this.deleteCharHandler.bind(this,index)}
                        inputText={inputText} 
                        key={index}/>
           })

@@ -24,6 +24,7 @@ class Courses extends Component {
                             return <article     
                                         className="Course" 
                                         key={course.id}
+                                        title={course.title}
                                         onClick={() => this.courseSelectionHandler ( course.id )}
                                         >{course.title}</article>;
                         } )

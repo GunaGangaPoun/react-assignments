@@ -11,8 +11,11 @@
     text-decoration: none;
     color: green;
 }
-.App a:active,
-.App a:hover {
-    color: darkmagenta;
+
+.App a:hover,
+.App a:active ,
+.App a.active{
+    color: rgb(151, 58, 151);
+    font-weight: bold;
    /* background: paleturquoise; */
 }

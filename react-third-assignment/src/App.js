@@ -25,7 +25,8 @@ class App extends Component {
                 <NavLink to="/users">Users</NavLink>
                 </li>
             <li>
-                <NavLink to ="/courses">Courses</NavLink>
+                <NavLink 
+                    to ="/courses">Courses</NavLink>
                 </li>
           </ul>
           <Switch>

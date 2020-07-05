@@ -6,6 +6,9 @@ import Users from './containers/Users/Users';
 import './App.css';
 
 class App extends Component {
+  state = {
+     auth : false
+  }
   render () {
     return (
       <BrowserRouter>
@@ -30,8 +33,9 @@ class App extends Component {
                 </li>
           </ul>
           <Switch>
-          <Route path="/users" component = { Users } />
-          <Route path="/courses" component= { Courses} />
+            {this.state.auth ? <Route path="/users" component = { Users } /> : null}
+            <Route path="/courses" component= { Courses} />
+            <Route render ={() => <h2>404 found</h2>} />
           </Switch>
         </div>
       </BrowserRouter>
